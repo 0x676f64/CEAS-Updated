@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik:wght@300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: Rubik, sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.top-bar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0F1922;
+    padding: 10px 20px;
+}
+
+.top-bar .social-icons,
+.top-bar .menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons a {
+    color: #f4f4f4;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #7ac362;
+    transform: scale(1.2);
+}
+
+.sales-tel a {
+    display: flex;
+    align-items: center;
+    color: #f4f4f4;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.sales-tel .small-logo {
+    margin-right: 10px; /* Adds spacing between the logo and text */
+}
+
+.sales-tel a:hover {
+    color: #7ac362;
+}
+
+.sales-tel {
+    display: flex;
+    position: relative;
+    margin-right: 5rem;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #ffffff;
+    max-width: 1500px; /* Sets a max-width for the nav container */
+    margin: 0 auto; /* Centers the nav container */
+    width: 100%; /* Ensures it takes full width up to max-width */
+}
+
+.main-nav_wrapper {
+    margin-top: 30px;
+}
+
+.header_logo img {
+    max-width: 250px;
+}
+
+.navg {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px; /* Spaces out nav items evenly */
+}
+
+.navg > li {
+    padding: 10px 15px;
+}
+
+.navg > li a {
+    color: #333;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navg > li a:hover {
+    color: #7ac362;
+    border-bottom: 2px solid #7ac362;
+}
+
+.navg a.active {
+    color: #7ac362;
+    text-decoration: underline;
+}
+
+.vertical-menu_submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px 0;
+    transition: opacity 0.3s;
+    z-index: 100;
+}
+
+.vertical-menu_submenu li {
+    padding: 5px 15px;
+    display: block;
+}
+
+.vertical-menu_submenu li a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    text-transform: none;
+    transition: color 0.3s;
+}
+
+.vertical-menu_submenu li a:hover {
+    color: #7ac362;
+}
+
+.navg > li:hover > .vertical-menu_submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon-down-arrow {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .top-bar,
+    .main-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .navg {
+        flex-direction: column;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .vertical-menu_submenu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .header_logo {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.section {
+    max-width: 1200px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .column, .container .columns {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sixteen, .one-whole {
+    width: calc(100% - 10px);
+}
+
+.divider.divider--true {
+    display: flex;
+    position: relative;
+    opacity: 1;
+}
+
+.divider {
+    border-top: 0px;
+}
+
+/* Centered hr with controlled width */
+hr {
+    border-width: 2px;
+    border-color: #7ac362;
+    border-style: solid;
+    clear: both;
+    width: 80%; /* Set desired width, e.g., 60% */
+    margin: 20px auto; /* Centers hr within container */
+    height: 0;
+}
+
+.container-two {
+    display: flex;
+    justify-content: center; /* Centers child elements horizontally */
+}
+
+.banner {
+    margin: 0; /* Remove margins that could offset the centering */
+    display: flex; /* Ensure flex behavior */
+}
+
+.image-element_wrap {
+    display: flex;
+    justify-content: center; /* Center the image inside this wrapper */
+}
+
+img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures margin auto works */
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Container to align logos */
+.logo-container {
+    display: flex;
+    justify-content: space-between; /* Positions logos on the left and right */
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Logo wrapper styling */
+.logo-wrapper {
+    display: block; /* Ensures the whole wrapper is clickable */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect to enlarge logos */
+.logo-wrapper:hover {
+    transform: scale(1.1); /* Enlarges the image on hover */
+}
+
+.logo-wrapper img {
+    max-width: 300px; /* Set max width for logos */
+    height: auto;
+}
+
+.header_logo {
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.header_logo:hover {
+    transform: scale(1.2); /* Enlarges the image on hover */
+}
+
+.left {
+    margin-bottom: 20px;
+}
+
+.center-banner-wrapper {
+    display: flex;
+    position: relative;
+    text-align: center;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .center-banner-wrapper {
+        width: 100%; /* Slightly increases width on smaller screens */
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .center-banner-wrapper {
+        width: 90%; /* Makes the banner fully responsive on small screens */
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-container {
+        justify-content: space-around; /* Brings logos closer on tablets */
+    }
+    .logo-wrapper img {
+        width: 120px; /* Slightly smaller for tablet screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        justify-content: center; /* Centers logos on mobile */
+        gap: 20px; /* Adds spacing between logos */
+    }
+    .logo-wrapper img {
+        width: 100px; /* Makes logos even smaller for mobile */
+    }
+}
+
+.redirection-icons {
+    display: flex;
+    justify-content: space-around; /* Centers and spaces icons evenly */
+    flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+    margin: 0 auto;
+    max-width: 60%; /* Controls container width, ensuring responsiveness */
+    padding: 20px 0;
+}
+
+.promo-icon, .products-icon, .support-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px; /* Adds spacing around icons */
+    width: 15rem; /* Consistent width for each icon container */
+}
+
+.promotion-icon img, .products-icon img, .support-icon img {
+    width: 100%; /* Sets icon to fill the container width */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.promotion-icon img:hover, .products-icon img:hover, .support-icon img:hover {
+    transform: scale(1.1); /* Slightly enlarges icon on hover */
+}
+
+.promo-text, .products-text, .support-text {
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.4s ease;
+    width: 100%;
+}
+
+.promo-text:hover, .products-text:hover, .support-text:hover {
+    background-color: #7ac362;
+    color: #fff;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    width: 1200px;
+    height: 663px;
+}
+
+/* Footer Banner */
+.footer-banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('assets/footer-banner.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px 0; /* Adjust for more spacing if needed */
+    text-align: center;
+}
+
+.subscribe-content {
+    position: relative;
+    max-width: 700px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.footer-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.subscribe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #0F1922;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Hover Effect for Button */
+.subscribe-button:hover {
+    background-color: #fff;
+    color: #0F1922;
+}
+
+/* Footer Continuation Section */
+.footer-continuation {
+    background-color: #0F1922;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.contact-info {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 15px; /* Space between icons */
+}
+
+.social-icons li a {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #7ac362; /* Highlight color for icons on hover */
+}
+
+/* Heading Styles */
+h2, .h2, h2.title {
+    font-family: Rubik, serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5;
+    display: block;
+    letter-spacing: 2px;
+    text-rendering: optimizeLegibility;
+    font-size: 30px;
+    margin: 5rem 0 0.75em 0; /* Combined margin for better readability */
+}
+
+/* Section Wide Styles */
+.section.is-width-wide {
+    width: 100%;
+    max-width: none;
+}
+
+/* Grid Layout for Logos */
+.gallery-section.gallery-masonry .five-per-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five columns per row */
+    gap: 10px; /* Adjust spacing between items */
+    justify-content: center; /* Center-align the grid */
+    margin: 10px 0; /* Space around the gallery */
+}
+
+/* General Masonry Settings */
+.gallery-section.gallery-masonry .masonry {
+    font-size: 0; /* Prevent whitespace between inline-block elements */
+    margin: 0; /* Removed redundant column-gap as grid handles spacing */
+}
+
+/* Image Styling */
+.gallery-section.gallery-masonry .gallery-image-wrapper img,
+.gallery-section.gallery-masonry .gallery-image-wrapper svg {
+    width: 100%; /* Ensure images fill the grid cell */
+    display: block;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Adjust Columns */
+.adjust-columns {
+    overflow: hidden;
+    padding: 0; /* Removed unnecessary column-gap override */
+}
+
+@media (max-width: 768px) {
+    .gallery-section.gallery-masonry .five-per-row {
+        grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-section.gallery-masonry .five-per-row {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+}
+
+/* Section Styling */
+.section.is-width-wide {
+    width: 100%;
+    max-width: none;
+}
+
+/* Grid Layout for Logos */
+.five-per-row {
+    display: grid; /* Apply grid layout */
+    grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
+    gap: 20px; /* Spacing between items */
+    justify-content: center; /* Center-align the grid */
+    margin: 20px auto; /* Add spacing around the grid */
+    width: 100%; /* Ensure full width */
+}
+
+/* Image Wrapper Styling */
+.gallery-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the items scale properly */
+}
+
+.gallery-image-wrapper img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    object-fit: contain; /* Ensure proper scaling inside the grid */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .five-per-row {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .five-per-row {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+    }
+}
