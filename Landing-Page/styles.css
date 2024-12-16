@@ -605,6 +605,7 @@ h2, .h2, h2.title {
     }
 }
 
+/* General Styling */
 .section {
     max-width: 1260px;
     width: 95%;
@@ -616,7 +617,7 @@ h2, .h2, h2.title {
     padding: 20px 0;
 }
 
-container {
+.container {
     position: relative;
     margin: 0 auto;
     display: flex;
@@ -637,8 +638,35 @@ container {
     margin-right: 10px;
 }
 
+/* Animation Classes */
 .fadeInDown {
     animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation Delay for Different Promos */
+.promo-1 {
+    animation-delay: 0s;
+}
+
+.promo-2 {
+    animation-delay: .3s;
+}
+
+.promo-3 {
+    animation-delay: .6s;
 }
 
 .animated {
@@ -646,6 +674,7 @@ container {
     animation-fill-mode: both;
 }
 
+/* Other styles */
 .featured-promotions .feature-section .feature-inner {
     display: block;
     position: relative;
@@ -680,16 +709,3 @@ a, a:visited, a span {
     position: relative;
     transition: color .1s linear;
 }
-
-.promo-1 {
-    animation-delay: 0s;
-}
-
-.promo-2 {
-    animation-delay: .3s;
-}
-
-.promo-3 {
-    animation-delay: .6s;
-}
-
