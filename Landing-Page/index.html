@@ -41,13 +41,24 @@
             margin-left: 5px;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>    
+    <script>
+        AOS.init({
+            offset: 100, // Offset (distance from the viewport) to trigger animation
+            delay: 300,  // Delay for the animation
+            duration: 1000, // Duration for the animation
+            easing: 'ease-in-out', // Easing function for the animation
+        });
+    </script>
+    
 </head>
 <body class="index">
     <div id="section-header" class="header ceas-section-header">
         <header class="search-enabled-true">
             <div class="header-fixed">
                 <div class="top-bar">
-                    <ul class="social-icons">
+                    <ul class="social-icons top-icons">
                         <li><a href="https://twitter.com/CuttingEdgeAS" title="Twitter" target="_blank" class="fab fa-twitter"></a></li>
                         <li><a href="https://facebook.com/CEASUSA/" title="Facebook" target="_blank" class="fab fa-facebook"></a></li>
                         <li><a href="https://www.youtube.com/channel/UCk9ZmwHOlO4qvtJgoeCbYGw" title="YouTube" target="_blank" class="fab fa-youtube"></a></li>
@@ -138,7 +149,7 @@
     </section>
     <section class="section">
         <div class="container js-featured-promotions featured-promotions full-width--false" data-promo-animation="fadeInDown">
-            <figure class="feature-section section-1 promo-1 one-third column medium-down--one-whole title-overlay-false promo-animation--true animated fadeInDown">
+            <figure class="feature-section section-1 promo-1 one-third column medium-down--one-whole title-overlay-false promo-animation--true animated fadeInDown" data-aos="fade-in-down" data-aos-delay="0">
                 <div class="feature-inner feature-style--rounded">
                     <div class="image-element_wrap" style=" ">
                         <img alt src="assets/finance-button.png" height="401" width="350" class="transition--blur-up lazyautosizes ls-is-cached lazyloaded">
@@ -271,7 +282,7 @@
     </div>
     
     <!-- Social Icons (same as at the top) -->
-    <ul class="social-icons">
+    <ul class="social-icons bottom-icons">
         <li><a href="https://twitter.com/CuttingEdgeAS" title="Twitter" target="_blank" class="fab fa-twitter"></a></li>
         <li><a href="https://facebook.com/CEASUSA/" title="Facebook" target="_blank" class="fab fa-facebook"></a></li>
         <li><a href="https://www.youtube.com/channel/UCk9ZmwHOlO4qvtJgoeCbYGw" title="YouTube" target="_blank" class="fab fa-youtube"></a></li>
